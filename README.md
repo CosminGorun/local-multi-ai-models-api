@@ -1,31 +1,57 @@
-Local Multi AI Models API
+<h2 align="center">Local Multi AI Models API</h2>
 
-How to run:
-Run the runner.py script. This will use the command:
-uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=True)
-and start a server on port 8000.
+<hr>
 
-The API uses FastAPI. Work in progress.
+<h3>How to Run</h3>
+<p>
+Run the <code>runner.py</code> script.<br>
+This will execute the command:<br>
+<code>uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=True)</code><br>
+and start a server on port <strong>8000</strong>.
+</p>
 
-Currently, there are 3 main classes:
+<p>
+The API uses <strong>FastAPI</strong>. This project is a work in progress.
+</p>
 
-custom_model
-This class imports and uses a pre-installed model from Hugging Face.
-It can be used with the following endpoints:
+<hr>
 
-POST:
-initModel – loads the model into memory.
-delModel – frees the model from memory.
+<h3>Available Classes</h3>
 
-GET:
-getResponse – returns a string with the model's answer.
+<h4>1) custom_model</h4>
+<p>
+This class imports and uses a pre-installed model from <strong>Hugging Face</strong>.<br>
+It provides the following endpoints:
+</p>
 
-generator3D
-Generates a 3D object from text or image, using Shap-E.
+<ul>
+<li><strong>POST</strong>:
+  <ul>
+    <li><code>/initModel</code> – loads the model into memory.</li>
+    <li><code>/delModel</code> – frees the model from memory.</li>
+  </ul>
+</li>
+<li><strong>GET</strong>:
+  <ul>
+    <li><code>/getResponse</code> – returns a string with the model's response.</li>
+  </ul>
+</li>
+</ul>
 
-openrouter_deepseek
-Calls the DeepSeek free model using OpenRouter.
+<h4>2) generator3D</h4>
+<p>
+Generates a 3D object from text or image using <strong>Shap-E</strong>.
+</p>
 
-I am still working on and updating this project, so the code may change, but the README may refer to an older version.
+<h4>3) openrouter_deepseek</h4>
+<p>
+Calls the <strong>DeepSeek</strong> free model using <strong>OpenRouter</strong>.
+</p>
 
-Dependencies are listed in the file requirements.txt.
+<hr>
+
+<h3>Status</h3>
+<p>
+This project is under active development. The code may change, so this README might refer to an older version.<br>
+All dependencies are listed in the <code>requirements.txt</code> file.
+</p>
